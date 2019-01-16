@@ -12,7 +12,7 @@ import time
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    # run_test_problem1a()
+    run_test_problem1a()
     # run_test_problem1b()
     # run_test_problem1c()
     # run_test_problem1d()
@@ -145,12 +145,12 @@ def problem1a(sequence):
       -- problem1a( (30, 1, 22, 8, 5) )  returns 35.
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
     x = sequence
-    ans = x[len(x)] + x[(len(x)-1)]
+    ans = x[0] + x[(len(x)-1)]
     return ans
 
 
@@ -302,6 +302,7 @@ def problem1b(strings):
     ###########################################################################
 
     ans = sum_of_digits(strings)
+
     while True:
         if ans %2 == 0:
             new_ans = is_prime(ans)
@@ -405,6 +406,11 @@ def problem1c(integers):
     # TODO: 4. Implement and test this function.
     #          Tests have been written for you (above).
     ###########################################################################
+
+    if len(integers) < len(integers)-1:
+        print(integers)
+    else:
+        print(999)
 
 
 def run_test_problem1d():
@@ -539,6 +545,8 @@ def problem1d(t, sequence):
     # TODO: 4. Implement and test this function.
     #          Tests have been written for you (above).
     ###########################################################################
+
+    ((len(sequence))/2)
 
 
 ###############################################################################

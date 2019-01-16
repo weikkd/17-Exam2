@@ -88,8 +88,8 @@ def main():
     print('Un-comment the calls in MAIN one by one')
     print(' to run the testing code as you complete the TODOs.')
 
-    # run_test_init()
-    # run_test_area()
+    run_test_init()
+    run_test_area()
     # run_test_bigger_triangle()
     # run_test_shrink_or_expand()
     # run_test_return_doubled_triangle()
@@ -139,7 +139,7 @@ class Triangle(object):
           :type c: Point
         """
         # ---------------------------------------------------------------------
-        # TODO: 2.
+        # DONE: 2.
         #   a. READ the above specification, including the Example.
         #        ** ASK QUESTIONS AS NEEDED. **
         #        ** Be sure you understand it, ESPECIALLY the Example.
@@ -148,9 +148,9 @@ class Triangle(object):
         #        They include the Example in the above doc-string.
         # ---------------------------------------------------------------------
 
-    self.a = a.clone()
-    self.b = b.clone()
-    self.c = c.clone()
+        self.a = a.clone()
+        self.b = b.clone()
+        self.c = c.clone()
 
     def area(self):
         """
@@ -183,7 +183,7 @@ class Triangle(object):
           :rtype: float
         """
         # ---------------------------------------------------------------------
-        # TODO: 3.
+        # DONE: 3.
         #   a. READ the above specification, including the Example AND HINT!
         #        ** ASK QUESTIONS AS NEEDED. **
         #        ** Be sure you understand it, ESPECIALLY the Example.
@@ -191,6 +191,13 @@ class Triangle(object):
         #        The tests are already written (below).
         #        They include the Example in the above doc-string.
         # ---------------------------------------------------------------------
+
+        side1 = self.a.distance_from(self.b)
+        side2 = self.b.distance_from(self.c)
+        side3 = self.c.distance_from(self.a)
+        srm = .5*(side1 + side2 + side3)
+        area = round(math.sqrt(srm*(srm-side2)*(srm-side1)*(srm-side3)))
+        print(area)
 
     def bigger_triangle(self, triangle2):
         """
@@ -214,6 +221,8 @@ class Triangle(object):
         #        The tests are already written (below).
         #        They include the Example in the above doc-string.
         # ---------------------------------------------------------------------
+
+        if triangle2.area() < self.
 
     def shrink_or_expand(self, f):
         """
